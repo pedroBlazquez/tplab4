@@ -1,4 +1,8 @@
 import React from 'react';
+import Layout from 'components/styled/Layout.js';
+import FixedHeader from 'components/styled/FixedHeader.js';
+import Footer from 'components/styled/Footer.js';
+import MainContent from 'components/styled/MainContent.js';
 
 /**
  * @description Main View component. This View should be mapped by "/" route.
@@ -10,10 +14,17 @@ class MainView extends React.Component {
 
   render () {
     return (
-      <div>
-        {'Hello Main View'}
-        {this.props.children}
-      </div>
+      <Layout>
+        <FixedHeader>
+          {'Here should be placed the NavBar'}
+        </FixedHeader>
+        <MainContent>
+          {this.props.children}
+        </MainContent>
+        <Footer>
+          {'Here should be placed the footer'}
+        </Footer>
+      </Layout>
     ); 
   }
 }
