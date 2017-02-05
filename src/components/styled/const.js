@@ -1,6 +1,7 @@
 //  COLORS
-export const gray = '#D4D4D4';
-export const pink = '#F7228B';
+export const gray     = '#D4D4D4';
+export const darkGray = '#272121';
+export const pink     = '#F7228B';
 
 // FONTS
 export const fontWeightLight = 300;

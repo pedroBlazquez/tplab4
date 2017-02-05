@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import Configuration from './Configuration/reducer.js';
 
 export default combineReducers(
   {
-    //Here should be all Modules reducers
+    Configuration
   }
 );
