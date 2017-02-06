@@ -5,5 +5,6 @@ export default Styled.article`
   p {
     line-height: 25px;
     margin: 20px 0;
+    white-space: pre-wrap;
   }
 `;

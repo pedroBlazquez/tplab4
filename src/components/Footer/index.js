@@ -8,7 +8,7 @@ class Footer extends React.Component {
     const { siteMapLinks } = this.props;
     return (
       <StyledFooter>
-        <SplitHalf 
+        <SplitHalf
           left={
             <SiteMap links={siteMapLinks}/>
           }

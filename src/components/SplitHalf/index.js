@@ -3,21 +3,20 @@ import Styled from 'styled-components';
 
 const Container = Styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({inverse}) => inverse ? "row-reverse" : "row"};
   justify-content: space-between;
 `;
 
 const Half = Styled.div`
   min-width: 50%;
-  min-height: 100%;
 `;
 
 class SplitHalf extends React.Component {
 
   render () {
-    const { right, left } = this.props;
+    const { right, left, inverse } = this.props;
     return (
-      <Container>
+      <Container inverse={inverse}>
         <Half>{left}</Half>
         <Half>{right}</Half>
       </Container>
@@ -27,7 +26,8 @@ class SplitHalf extends React.Component {
 
 SplitHalf.propTypes = {
   right: React.PropTypes.node.isRequired,
-  left: React.PropTypes.node.isRequired
+  left: React.PropTypes.node.isRequired,
+  inverse: React.PropTypes.bool
 };
 
 export default SplitHalf;

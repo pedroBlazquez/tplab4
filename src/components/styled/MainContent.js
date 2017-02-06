@@ -1,9 +1,9 @@
 import React from 'react';
 import Styled from 'styled-components';
-import { footerHeignt } from './const.js';
+import { footerHeight, headerHeight } from './const.js';
 
 export default Styled.div`
-  min-height: 100%;
-  padding-bottom: ${footerHeignt};
+  min-height: calc(100% - ${headerHeight} - ${footerHeight});
   margin: 0 90px;
+  padding: 15px 0;
 `;

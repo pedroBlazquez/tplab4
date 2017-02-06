@@ -3,21 +3,23 @@ import SplitHalf from 'components/SplitHalf';
 import Separator from 'components/styled/Separator.js';
 import { Button } from 'components/styled/Buttons.js';
 import ProductDescription from 'components/ProductDescription';
+import Required from 'components/styled/Required.js';
 
-class TallerContent extends React.Component {
+class EventoContent extends React.Component {
 
   render () {
-    const { talleres } = this.props;
+    const { eventos } = this.props;
     return (
       <div>
-        {talleres.map((t,i) =>
-          <div key={t.title}>
+        {eventos.map(e =>
+          <div key={e.title}>
             <SplitHalf
-              inverse={(i + 1) % 2 === 0}
               right={
                 <div>
-                  <ProductDescription title={t.title} description={t.description}/>
-                  <Button>{'Inscribirse'}</Button>
+                  <ProductDescription title={e.title} description={e.description}/>
+                  <Button>{'Entradas'}</Button>
+                  <Button>{'Contacto'}</Button>
+                  <Button>{'+Info'}</Button>
                 </div>
               }
               left={<div>{'Here must be carrousel'}</div>}
@@ -30,4 +32,4 @@ class TallerContent extends React.Component {
   }
 }
 
-export default TallerContent;
+export default EventoContent;
